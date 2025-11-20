@@ -34,25 +34,22 @@ public enum TokenType
 
 public static class TokenTypeExtensions
 {
-    public static string ToString(this TokenType tokenType)
+    public static string ToString(this TokenType tokenType) => tokenType switch
     {
-        return tokenType switch
-        {
-            TokenType.ILLEGAL => "ILLEGAL",
-            TokenType.EOF => "EOF",
-            TokenType.IDENT => "IDENT",
-            TokenType.INT => "INT",
-            TokenType.ASSIGN => "=",
-            TokenType.PLUS => "+",
-            TokenType.COMMA => ",",
-            TokenType.SEMICOLON => ";",
-            TokenType.LPAREN => "(",
-            TokenType.RPAREN => ")",
-            TokenType.LBRACE => "{",
-            TokenType.RBRACE => "}",
-            TokenType.FUNCTION => "FUNCTION",
-            TokenType.LET => "LET",
-            _ => tokenType.ToString()
-        };
-    }
+        TokenType.ILLEGAL => "ILLEGAL",
+        TokenType.EOF => "EOF",
+        TokenType.IDENT => "IDENT",
+        TokenType.INT => "INT",
+        TokenType.ASSIGN => "=",
+        TokenType.PLUS => "+",
+        TokenType.COMMA => ",",
+        TokenType.SEMICOLON => ";",
+        TokenType.LPAREN => "(",
+        TokenType.RPAREN => ")",
+        TokenType.LBRACE => "{",
+        TokenType.RBRACE => "}",
+        TokenType.FUNCTION => "FUNCTION",
+        TokenType.LET => "LET",
+        _ => tokenType.ToString()
+    };
 }
